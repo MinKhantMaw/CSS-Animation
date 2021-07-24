@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .room {
+            width: 600px;
+            height: 500px;
+            background-image: url("img/Capture.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            margin: 100px auto;
+            /* transform မသုံးချင်လို positionသုံးတာ */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .lu {
+            width: 100px;
+        }
+        
+        .lu-div {
+            /* transform: translate(165px, 287px); */
+            position: absolute;
+            top: 290px;
+            left: 190px;
+        }
+        
+        .knife {
+            width: 100px;
+            position: absolute;
+            top: 471px;
+            left: 278px;
+            animation: slice 4s;
+            transform: rotate(0deg);
+        }
+        
+        .boy {
+            animation: toLeft 5s;
+            transform: translateX(-100px);
+        }
+        
+        .girl {
+            animation: toRight 5s;
+            transform: translateX(100px);
+        }
+        
+        .fa {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            animation: fa 6s;
+        }
+        
+        @keyframes slice {
+            0% {
+                top: 800px;
+            }
+            40% {
+                top: 416px;
+            }
+            50% {
+                transform: rotate(60deg);
+            }
+            60% {
+                transform: (0deg);
+            }
+            60% {
+                transform: (0deg);
+            }
+            70% {
+                transform: (0deg);
+            }
+            80% {
+                transform: (0deg);
+            }
+            90% {
+                transform: (0deg);
+            }
+            100% {
+                transform: (0deg);
+            }
+        }
+        
+        @keyframes toLeft {
+            0% {
+                transform: translateX(0px);
+            }
+            80% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translateX(-100px);
+            }
+        }
+        
+        @keyframes toRight {
+            0% {
+                transform: translateX(0px);
+            }
+            80% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translateX(100px);
+            }
+        }
+        
+        @keyframes fa {
+            0% {
+                top: 500px;
+            }
+            80% {
+                top: 500px;
+            }
+            100% {
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="room">
+        <div class="lu-div">
+            <img class="lu boy" src="img/girl.png" alt="">
+            <img class="lu girl" src="img/boy.png" alt="">
+        </div>
+        <img class="knife" src="img/knife.png">
+
+        <div class="fa">
+            <div class="">
+                <img src="img/fa.png" style="width: 100px;" alt="">
+                <p>FA တစ်ယောက်ရဲ့နာကျဥ်းချက်</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+</html>
